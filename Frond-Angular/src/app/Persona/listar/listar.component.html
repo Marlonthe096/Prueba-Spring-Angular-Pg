@@ -1,0 +1,38 @@
+<div class="card card-flush h-md-100">
+    <div class="card-header pt-7">
+      <h3 class="card-title align-items-start flex-column">
+        <span class="card-label fw-bolder text-gray-800">Listado</span>
+        <span class="text-gray-400 mt-1 fw-bold fs-6">Listado</span>
+      </h3>
+      <div class="card-toolbar">
+        <a  class="btn btn-sm btn-light" (click)="add()">Nuevo</a>
+      </div>
+    </div>
+<div class="card-body pt-6">
+  <div class="table-responsive">
+    <table class="table table-row-dashed align-middle gs-0 gy-3 my-0">
+      <thead>
+        <tr class="fs-7 fw-bolder text-gray-400 border-bottom-0">
+          <th class="p-0 pb-3 min-w-50px text-primary text-center">ID</th>
+          <th class="p-0 pb-3 min-w-150px text-primary text-center">NOMBRE</th>
+          <th class="p-0 pb-3 w-150px text-primary text-center">TELÉFONO</th>
+          <th class="p-0 pb-3 w-200px text-primary text-center">ACCIONES</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let personas of personas" class="text-center">
+          <td>{{personas.id}}</td>
+          <td>{{personas.nombre}}</td>
+          <td>{{personas.telefono}}</td>
+          <td>
+            <a class="btn btn-sm btn-primary" (click)="edit(personas)"><i class="fa-solid fa-file-pen"></i></a>
+            <a class="btn btn-sm btn-light" (click)="delete(personas)" style="margin-left: 10px;"><i class="fa-solid fa-trash-can"></i></a>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+

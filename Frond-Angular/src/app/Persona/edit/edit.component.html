@@ -1,0 +1,25 @@
+<div class="card card-flush h-md-100">
+  <div class="card-header pt-7">
+    <h3 class="card-title align-items-start flex-column">
+      <span class="card-label fw-bolder text-gray-800">Modificar</span>
+      <span class="text-gray-400 mt-1 fw-bold fs-6">Editar</span>
+    </h3>
+    <div class="card-toolbar">
+      <a  class="btn btn-sm btn-light" (click)="lista()">Lista</a>
+    </div>
+  </div>
+<div class="card-body pt-6">
+  <form action="">
+    <div class="form-group">
+      <label for="">Nombre:</label>
+      <input [(ngModel)]="persona.nombre" name="nombre" type="text" class="form-control">
+    </div>
+    <div class="form-group tp" >
+      <label for="">Teléfono:</label>
+      <input [(ngModel)]="persona.telefono" name="telefono" type="text" class="form-control">
+    </div>
+      <a  (click)="modificar(persona)" class="btn btn-sm btn-light tp">Modificar</a>
+  </form>
+</div>
+</div>
+
